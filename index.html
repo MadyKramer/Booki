@@ -29,11 +29,9 @@
                 <p>En plein centre ville ou en pleine nature</p>
             </div>
                 <div id="SearchBar">
-                    <form method="post" action="traitment.php">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <input type="text" id="ville" name="ville" placeholder="Marseille,France">
-                        <input type="submit" value="Rechercher">
-                    </form>
+                    <span id="SearchIcon"><i class="fas fa-map-marker-alt"></i></span>
+                    <input type="text" id="ville" name="ville" placeholder="Marseille,France">
+                    <button>Rechercher</button> <!--Ne se colle pas avec une balise form-->                
                 </div>
             <div id="Filters">
                 <h2>Filtres</h2>

@@ -3,7 +3,12 @@
 }
 
 header{
-    margin: 40px 28px 20px 20px;
+    margin: 40px 28px 20px 10px;
+    padding-bottom: 15px;
+}
+
+section{
+    padding: 0px 10px;
 }
 
 a{
@@ -24,7 +29,7 @@ nav a{
     text-align: center;
 }
 
-nav a:hover{
+nav a:hover{ /*Diff padding moz - webkit*/
     color: #0065FC;
     border-top: 2px solid #0065FC;
 }
@@ -33,6 +38,45 @@ nav a:hover{
     margin-right: auto;
     padding: 0px 10px;
     width: 132px;
+}
+
+#Grip h1{
+    font-size: 24px;
+}
+
+#Grip p{
+    font-size: 17px;
+}
+
+#SearchBar{
+    display: flex;
+}
+
+#ville{
+    padding-right: 35px;
+    border: 2px solid #F2F2F2;
+}
+
+input::placeholder{
+    color: black;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+#SearchBar button{
+    background-color: #0065FC;
+    border: 2px solid #0065FC;
+    border-radius: 0px 12px 12px 0px;
+    color: white;
+    font-weight: bold;
+    padding: 0px 17px;
+}
+
+
+#SearchIcon{
+    padding: 15px 17px;
+    background-color: #F2F2F2;
+    border-radius: 12px 0px 0px 12px;
 }
 
 #Filters{
@@ -45,16 +89,17 @@ nav a:hover{
     border-radius: 25px;
     padding: 10px;
     margin: 0px 20px;
+    font-weight: bold;
 }
 
 .Filtericons{
     display: inline;
+    position: relative;
     color: #0065FC;
     background:#DEEBFF;
-    padding: 11px;
     border: 1px solid #DEEBFF;
     border-radius: 100%;
-    position: relative;
+    padding: 11px;
     right: 11px;
 }
 
