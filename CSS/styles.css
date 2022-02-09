@@ -2,17 +2,23 @@
     font-family: 'Raleway', "Sans-Serif";
 }
 
-header{
-    margin: 40px 28px 20px 10px;
-    padding-bottom: 15px;
-}
-
-section{
-    padding: 0px 10px;
+main{  /*Pas de marge droite sur IPad Air*/
+    margin: 25px;
 }
 
 a{
     text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
+
+/*HEADER*/
+
+header{
+    margin: 0px 28px 20px 10px;
+    padding-bottom: 15px;
 }
 
 nav{
@@ -23,22 +29,31 @@ nav{
     font-size: large;
 }
 
-nav a{
-    padding: 53px 20px 0px 20px;
-    border-top: 2px solid white;
-    text-align: center;
+.menu{
+    
+    font-size: large;
+    display: flex;
 }
 
-nav a:hover{ /*Diff padding moz - webkit*/
+.menu a{
+    padding: 53px 20px 22px 20px;
+    border-top: 2px solid white;
+    text-align: center;
+    align-items: flex-end;
+}
+
+
+nav a:hover{ 
     color: #0065FC;
     border-top: 2px solid #0065FC;
 }
 
 #logo{
-    margin-right: auto;
-    padding: 0px 10px;
-    width: 132px;
+    margin-right: auto; /*Decale tout*/
+    padding: 0px 11px;
+     width: 132px;
 }
+/*1ere SECTION*/ 
 
 #Grip h1{
     font-size: 24px;
@@ -47,9 +62,11 @@ nav a:hover{ /*Diff padding moz - webkit*/
 #Grip p{
     font-size: 17px;
 }
+/*SEARCHBAR*/ 
 
 #SearchBar{
     display: flex;
+    padding-bottom: 30px;
 }
 
 #ville{
@@ -63,50 +80,247 @@ input::placeholder{
     padding-left: 10px;
 }
 
-#SearchBar button{
+#SearchBar button{ 
     background-color: #0065FC;
     border: 2px solid #0065FC;
     border-radius: 0px 12px 12px 0px;
-    color: white;
     font-weight: bold;
     padding: 0px 17px;
+    color: white;
+    cursor: pointer;
 }
 
-
-#SearchIcon{
+#MapIcon{
     padding: 15px 17px;
     background-color: #F2F2F2;
     border-radius: 12px 0px 0px 12px;
 }
 
+/*FILTERS*/
+
+#Filters h3{
+    font-size: 17px;
+}
 #Filters{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 40px;
+    padding-bottom: 25px;
 }
 
 .FiltersLink{
-    border: 2px solid #F2F2F2;
+    border: 2px solid #CFCECE;
     border-radius: 25px;
-    padding: 10px;
-    margin: 0px 20px;
-    font-weight: bold;
+    padding: 13px;
+    font-weight: 700;
+    transition-duration: 0.5s;
+}
+
+.FiltersLink:hover{
+    background-color: #DEEBFF;
+    transform: scale(1.2);
+    border: 2px solid #DEEBFF;
 }
 
 .Filtericons{
     display: inline;
-    position: relative;
+    position: relative; 
+    right: 15px;
     color: #0065FC;
     background:#DEEBFF;
-    border: 1px solid #DEEBFF;
-    border-radius: 100%;
-    padding: 11px;
-    right: 11px;
+    border-radius: 50%;
+    padding: 13px;
+
 }
+
+.Filtericons i{
+    width: 16px;
+    position: relative;
+
+}
+
+#info{
+    padding-bottom: 25px;
+}
+
+#info i{
+    color: #0065FC;
+    border: 2px solid #F2F2F2;
+    border-radius: 50%;
+    padding: 4px 8px;
+}
+
+#info p{
+    display: inline;
+    padding-left: 10px;
+}
+
+/*SECTIONS*/
+
+.LocationsSection{
+    display: flex;
+    margin-top: 10px;
+    gap: 35px;
+}
+
+
+#MarseillesLocation{
+    background-color: #F2F2F2;
+    flex-basis: 60%;
+    border-radius: 25px;
+    padding: 25px 25px 35px 25px;
+}
+
+#MarseillesLocation a{
+    font-weight: bold;
+}
+
+#MarseillesPopular{
+    background-color: #F2F2F2;
+    flex-basis: 20%;
+    border-radius: 25px;
+    padding: 25px 35px 40px 35px;
+    width: 80%;
+}
+
+.ApartmentsList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+
+.ApartmentsList div{
+    flex-basis: 25%;
+}
+
+.ApartmentCard{
+    background-color: white;
+    border: 2px solid white;
+    box-shadow: 3px 5px 5px #36323261;
+    border-radius: 20px;
+    padding: 2px 2px 6px 2px;
+    transition-duration: 0.7s;
+}
+
+.ApartmentCard:hover{
+    transform: scale(1.1);
+}
+
+.ApartmentCard h4{
+    font-size: 14px;
+    margin: 0%;
+    padding: 1% 3%;
+}
+
+.ApartmentCard p{
+    margin: 0;
+    font-size: 12px;
+    padding: 1% 3%;
+}
+
+.ApartmentCard img{
+    border-radius: 20px 20px 0px 0px;
+    width: 210px;
+    height: 110px;
+    object-fit: cover;
+}
+
+/*ASIDE*/
+
+.PopularList{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.PopularTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.PopularCard{
+    background-color: white;
+    border: 4px solid white;
+    border-radius: 20px;
+    display: flex; 
+    padding: 0px;
+    transition-duration: 0.7s;
+
+}
+
+.PopularCard:hover{
+    transform: scale(1.1);
+}
+
+.PopularCard h4{
+    font-size: 14px;
+    margin: 0%
+}
+
+.PopularCard p{
+    font-size: 12px;
+    margin: 0px;
+    padding: 5px 0px 25px 0px;
+}
+
+.PopularCard img{ /*Probleme de dimensions?*/
+    border-radius: 20px 0px 0px 20px;
+    width: 118px;
+    height: 118px;
+    object-fit: cover;
+}
+
+.PopularRight{
+    flex-direction: row;
+    padding: 5% 5% 0% 5%;
+}
+
+.BoldPrices{
+    font-weight: bold;
+}
+
+.Stars{
+    margin: 0;
+    font-size: 10px;
+    padding: 0% 0% 2% 3%;
+}
+
+.Stars, .Blue, .Grey{
+    display: inline;
+}
+
+.Blue{
+    color: #0065FC;
+ 
+}
+
+.Grey{
+    color: #F2F2F2;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (min-width:768px){
+
+    #SearchIcon{
+        display: none;
+    }
+}
+
 
 @media screen and (min-width:768px) and (max-width:992px){
 
+    .LocationsSection{
+        flex-direction: column-reverse;
+    }
 
+    
 }
+
 
 @media screen and (max-width:767px){
 
@@ -117,15 +331,16 @@ input::placeholder{
     .menu{
         flex-basis: 100%;
         display: flex;
-        padding-top: 75px;
+        padding: 10px 0px;
     }
 
-    nav a{
+
+    .menu a{
         flex-basis: 50%;
-        padding-top: 0px;
-        padding-bottom: 15px;
         flex-direction: row;
         justify-content: center;
+        font-weight: 500;
+        padding: 53px 20px 22px 20px;
     }
 
     #rental{
@@ -140,5 +355,29 @@ input::placeholder{
 
     #logo{
        margin: auto;
+    }
+
+    .menu{
+        padding-top: 20px;
+    }
+
+    #SearchDesktop{
+        display: none;
+    }
+
+    #SearchBar{
+        margin-top: 25px;
+    }
+
+    #Filters{
+        gap: 15px;
+    }
+
+    .LocationsSection{
+        flex-direction: column-reverse;
+    }
+    
+    .ApartmentsList div{
+        flex-basis: 100%
     }
 }
