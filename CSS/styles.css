@@ -2,7 +2,7 @@
     font-family: 'Raleway', "Sans-Serif";
 }
 
-main{  /*Pas de marge droite sur IPad Air*/
+main{  
     margin: 25px;
 }
 
@@ -11,7 +11,7 @@ a{
 }
 
 a:visited{
-    color: black;
+    color: black; 
 }
 
 /*HEADER*/
@@ -49,10 +49,11 @@ nav a:hover{
 }
 
 #logo{
-    margin-right: auto; /*Decale tout*/
+    margin-right: auto; /*A recentrer - Decale tout*/
     padding: 0px 11px;
-     width: 132px;
+    width: 132px;
 }
+
 /*1ere SECTION*/ 
 
 #Grip h1{
@@ -161,7 +162,7 @@ input::placeholder{
 .LocationsSection{
     display: flex;
     margin-top: 10px;
-    gap: 35px;
+    gap: 5%;
 }
 
 
@@ -178,10 +179,9 @@ input::placeholder{
 
 #MarseillesPopular{
     background-color: #F2F2F2;
-    flex-basis: 20%;
     border-radius: 25px;
     padding: 25px 35px 40px 35px;
-    width: 80%;
+    width: 100%;
 }
 
 .ApartmentsList{
@@ -230,6 +230,7 @@ input::placeholder{
 
 /*ASIDE*/
 
+
 .PopularList{
     display: flex;
     flex-direction: column;
@@ -249,6 +250,7 @@ input::placeholder{
     display: flex; 
     padding: 0px;
     transition-duration: 0.7s;
+    height: 118px;
 
 }
 
@@ -258,7 +260,8 @@ input::placeholder{
 
 .PopularCard h4{
     font-size: 14px;
-    margin: 0%
+    margin: 0%;
+    font-weight: bold;
 }
 
 .PopularCard p{
@@ -267,10 +270,9 @@ input::placeholder{
     padding: 5px 0px 25px 0px;
 }
 
-.PopularCard img{ /*Probleme de dimensions?*/
+.PopularCard img{ 
     border-radius: 20px 0px 0px 20px;
     width: 118px;
-    height: 118px;
     object-fit: cover;
 }
 
@@ -304,6 +306,8 @@ input::placeholder{
 
 /*MEDIA QUERIES*/
 
+/*Desktop and tab*/
+
 @media screen and (min-width:768px){
 
     #SearchIcon{
@@ -311,16 +315,60 @@ input::placeholder{
     }
 }
 
+/*Tablette*/
 
 @media screen and (min-width:768px) and (max-width:992px){
+
+    main{
+        margin: 0px;
+    }
 
     .LocationsSection{
         flex-direction: column-reverse;
     }
 
-    
-}
+    .PopularCard{
+        width: 100%;
+        height: 200px;
+    }
 
+    .PopularCard img{
+        width: 33%;
+    }
+
+    .PopularList h4{
+        font-size: 18px;
+    }
+
+    .PopularList p{
+        font-size: 15px;
+    }
+
+    #MarseillesPopular{
+        width: 100%;
+    }
+
+    .IntroWrapper, #Filters, #FiltersH3, #info{
+        margin: 25px;
+    }
+
+    .PopularRight{
+        padding: 2% 5% 0% 2%;
+    }
+
+    #MarseillesPopular, #MarseillesLocation{
+        border-radius: 0%;
+    }
+    
+    #MarseillesLocation{
+        background-color: white;
+    }
+
+    .Stars{ /*Bouger etoiles?*/
+        font-size: 18px;
+    }
+}
+/*Smartphone*/
 
 @media screen and (max-width:767px){
 
@@ -328,12 +376,19 @@ input::placeholder{
         margin: 0px;
     }
 
+    main{
+        margin: 0px;
+    }
+
+    .IntroWrapper, #Filters, #info{
+        margin: 25px;
+    }
+
     .menu{
         flex-basis: 100%;
         display: flex;
         padding: 10px 0px;
     }
-
 
     .menu a{
         flex-basis: 50%;
@@ -373,11 +428,53 @@ input::placeholder{
         gap: 15px;
     }
 
-    .LocationsSection{
+    #FiltersH3{
+        margin: 25px;
+    }
+
+    .LocationsSection{ 
         flex-direction: column-reverse;
     }
     
-    .ApartmentsList div{
-        flex-basis: 100%
+    #MarseillesPopular, #MarseillesLocation{
+        width: 100%;
+        padding: 5%;
+        border-radius: 0%;
     }
+
+    #MarseillesPopular h3{
+        padding-bottom: 10px;
+    }
+
+    #MarseillesLocation{
+        background-color: white;
+    }
+   
+    .PopularCard, .ApartmentCard{
+        box-shadow: 0 0 16px #0000002e;
+    }
+
+    .PopularList{
+        gap: 10px;
+        flex-grow: 3;
+    }
+
+    .PopularCard img{
+        width: 33%;
+    }
+
+    .ApartmentCard{
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .ApartmentCard img{
+        width: 100%;
+    }
+
+    .ApartmentsList{
+        display: block;
+    }
+
+
 }
