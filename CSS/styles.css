@@ -102,6 +102,7 @@ input::placeholder{
 #Filters h3{
     font-size: 17px;
 }
+
 #Filters{
     display: flex;
     flex-wrap: wrap;
@@ -159,7 +160,7 @@ input::placeholder{
 
 /*SECTIONS*/
 
-.LocationsSection{
+.LocationsSection{ /*largeur section+aside a retoucher*/
     display: flex;
     margin-top: 10px;
     gap: 5%;
@@ -170,11 +171,12 @@ input::placeholder{
     background-color: #F2F2F2;
     flex-basis: 60%;
     border-radius: 25px;
-    padding: 25px 25px 35px 25px;
+    padding: 25px 25px 23px 25px;
 }
 
 #MarseillesLocation a{
     font-weight: bold;
+
 }
 
 #MarseillesPopular{
@@ -193,7 +195,7 @@ input::placeholder{
 }
 
 .ApartmentsList div{
-    flex-basis: 25%;
+    flex-basis: 17%;
 }
 
 .ApartmentCard{
@@ -202,7 +204,7 @@ input::placeholder{
     box-shadow: 3px 5px 5px #36323261;
     border-radius: 20px;
     padding: 2px 2px 6px 2px;
-    transition-duration: 0.7s;
+    transition-duration: 0.5s;
 }
 
 .ApartmentCard:hover{
@@ -241,6 +243,7 @@ input::placeholder{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
 }
 
 .PopularCard{
@@ -249,7 +252,7 @@ input::placeholder{
     border-radius: 20px;
     display: flex; 
     padding: 0px;
-    transition-duration: 0.7s;
+    transition-duration: 0.5s;
     height: 118px;
 
 }
@@ -267,7 +270,7 @@ input::placeholder{
 .PopularCard p{
     font-size: 12px;
     margin: 0px;
-    padding: 5px 0px 25px 0px;
+    padding: 5px 0px 25px 0px; /*A rectifier*/
 }
 
 .PopularCard img{ 
@@ -304,6 +307,96 @@ input::placeholder{
     color: #F2F2F2;
 }
 
+/*Activités à Marseille*/
+
+
+.ActivitiesWrapper{
+    display: flex;
+    height: 460px;
+    gap: 3%;
+}
+
+.ActivitiesWrapper img{
+    border-radius: 20px 20px 0px 0px;
+}
+
+.ActivityCard{
+    box-shadow: 3px 5px 5px #36323261;
+    border-radius: 20px;
+    transition-duration: 0.5s;
+}
+
+.ActivityCard:hover{
+    transform: scale(1.05);
+}
+
+.Column1, .Column2, .Column3, .Column4{
+    width: 25%;
+    height: 100%;
+}
+
+#ActivitiesSection h3{
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.ActivitiesWrapper h4{
+    font-size: 16px;
+    margin: 0%;
+    padding: 3% 5%;
+}
+
+.Column2, .Column4{
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+}
+
+.Column1 img, .Column3 img{
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.Pomegues{
+    height: 51%;
+}
+
+.Pomegues img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.Frioul{
+    height: 41%;
+}
+
+.Frioul img{
+    width: 100%;
+    height: 76%;
+    object-fit: cover;
+}
+
+.NotreDame{
+    height: 46%;
+}
+
+.Longchamp{
+    height: 46%;
+}
+
+.NotreDame img{
+    width: 100%;
+    height: 78%;
+    object-fit: cover;
+}
+
+.Longchamp img{
+    width: 100%;
+    height: 79%;
+    object-fit: cover;
+}
 /*MEDIA QUERIES*/
 
 /*Desktop and tab*/
@@ -312,9 +405,30 @@ input::placeholder{
 
     #SearchIcon{
         display: none;
-    }
+    }   
 }
 
+/*Tablette + Smarphone*/ 
+@media screen and (max-width:992px){
+
+    .PopularCard:hover{
+        transform: none;
+    }
+
+    .FiltersLink:hover{
+        background: none;
+        transform: none;
+        border: 2px solid #CFCECE;
+    }
+
+    .Column1:hover, .Pomegues:hover, .Frioul:hover, .Column3:hover, .NotreDame:hover, .Longchamp:hover{
+        transform: none;
+    }
+
+    .ApartmentCard:hover{
+        transform: none;
+    }
+}
 /*Tablette*/
 
 @media screen and (min-width:768px) and (max-width:992px){
@@ -476,5 +590,25 @@ input::placeholder{
         display: block;
     }
 
+    .ActivitiesWrapper{
+        flex-direction: column;
+        border: 2px solid palevioletred;
+        height: auto;
+    }
+
+    #ActivitiesSection{
+        border: 2px solid chartreuse;
+        height: auto;
+    }
+
+
+    .ActivityCard{
+        border: 2px solid darkmagenta;
+    }
+
+    
+
+
+   
 
 }
