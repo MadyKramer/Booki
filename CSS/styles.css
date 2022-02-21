@@ -11,8 +11,6 @@ a{
     color: black;
 }
 
-
-
 /*HEADER*/
 
 header{
@@ -47,9 +45,13 @@ nav a:hover{
 }
 
 #logo{
-    margin-right: auto; /*A recentrer - Decale tout*/
+    margin-right: auto;
     padding: 0px 11px;
     width: 132px;
+}
+
+#ResponsiveLogo{
+    display: none;
 }
 
 /*1ere SECTION*/ 
@@ -61,8 +63,8 @@ nav a:hover{
 #Grip p{
     font-size: 17px;
 }
-/*SEARCHBAR*/ 
 
+/*SEARCHBAR*/ 
 
 #SearchBar{
     display: flex;
@@ -72,7 +74,6 @@ nav a:hover{
 }
 
 #ville{
-    padding-right: 4%;
     border: 2px solid #F2F2F2;
     width: 200px;
 }
@@ -135,13 +136,11 @@ input::placeholder{
     background:#DEEBFF;
     border-radius: 50%;
     padding: 13px;
-
 }
 
 .Filtericons i{
     width: 16px;
     position: relative;
-
 }
 
 #info{
@@ -162,9 +161,8 @@ input::placeholder{
 
 /*SECTIONS*/
 
-.LocationsSection{ /*largeur section+aside a retoucher*/
+.LocationsSection{ 
     display: flex;
-    justify-content: space-around;
     margin-top: 10px;
     gap: 4%;
     margin: auto;
@@ -178,14 +176,20 @@ input::placeholder{
     padding: 25px 25px 23px 25px;
 }
 
-#MarseillesLocation a{
-    font-weight: bold;
+#MarseillesLocation h3{
+    padding-left: 2%;
+}
+
+.PopularLink{
+    display: flex;
+    height: auto;
+    width: auto;
 }
 
 #MarseillesPopular{
     background-color: #F2F2F2;
     border-radius: 25px;
-    padding: 35px 35px 40px 35px;
+    padding: 23px 35px 40px 35px;
     flex-basis: 35%;
 }
 
@@ -194,7 +198,7 @@ input::placeholder{
     flex-wrap: wrap;
     justify-content: center;
     gap: 3%;
-    margin-bottom: 3%;
+    margin: 3% 0%;
 }
 
 .ApartmentsList div{
@@ -208,12 +212,7 @@ input::placeholder{
     border-radius: 20px;
     padding: 2px 2px 6px 2px;
     transition-duration: 0.5s;
-    margin-bottom: 2%;
-
-}
-
-.ApartmentCard:hover{
-    transform: scale(1.1);
+    margin-bottom: 7%;
 }
 
 .ApartmentCard h4{
@@ -235,8 +234,19 @@ input::placeholder{
     object-fit: cover;
 }
 
-/*ASIDE*/
+.ApartmentCard .Stars{
+    padding-left: 3%;
+}
 
+#ShowMore{
+    font-weight: bold;
+}
+
+.ApartmentCard:hover{
+    transform: scale(1.1);
+}
+
+/*ASIDE*/
 
 .PopularList{
     display: flex;
@@ -244,22 +254,21 @@ input::placeholder{
     gap: 35px;
 }
 
-.PopularTitle{
+.PopularTitle{ 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
 }
 
 .PopularCard{
+    display: flex;
     background-color: white;
     border: 4px solid white;
     border-radius: 20px;
-    display: flex; 
-    padding: 0px;
     transition-duration: 0.5s;
-    height: 125px;
-
+    height: 145px;
 }
 
 .PopularCard:hover{
@@ -268,48 +277,48 @@ input::placeholder{
 
 .PopularCard h4{
     font-size: 14px;
-    margin: 0%;
     font-weight: bold;
+    margin: 0px;
+}
+
+.RightText{
+    margin: 15px;
 }
 
 .PopularCard p{
     font-size: 12px;
-    margin: 0px;
-    padding: 5px 0px 25px 0px; 
 }
 
 .PopularCard img{ 
     border-radius: 20px 0px 0px 20px;
-    width: 118px;
+    width: 35%;
     object-fit: cover;
 }
 
-.PopularRight{
-    flex-direction: row;
-    padding: 5% 5% 0% 5%;
+.PopularRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 145px;
+}
+
+.RightStars{
+    margin: 15px;
 }
 
 .BoldPrices{
     font-weight: bold;
 }
 
-.Stars{
-    margin: 0;
-    font-size: 10px;
-    padding: 0% 0% 2% 3%;
-}
-
-.Stars, .Blue, .Grey{ /* A régler dans PopularCard*/ 
-    display: inline;
-}
-
 .Blue{
     color: #0065FC;
- 
+    font-size: 12px;
 }
 
 .Grey{
     color: #F2F2F2;
+    font-size: 12px;
 }
 
 /*Activités à Marseille*/
@@ -402,9 +411,8 @@ input::placeholder{
     height: 79%;
     object-fit: cover;
 }
+
 /*FOOTER*/
-
-
 
 #Footer{
     height: 175px;
@@ -412,8 +420,6 @@ input::placeholder{
     background-color: #F2F2F2;
     padding-bottom: 13%;
     display: flex;
-
-    
 }
 
 .FooterLinks{
@@ -431,8 +437,6 @@ input::placeholder{
     padding: 7px 0px 10px 0px;
 }
 
-
-
 /*MEDIA QUERIES*/
 
 /*Desktop and tab*/
@@ -442,8 +446,6 @@ input::placeholder{
     #SearchIcon{
         display: none;
     }   
-
-
 }
 
 /*Tablette + Smarphone*/ 
@@ -468,6 +470,7 @@ input::placeholder{
     }
 
 }
+
 /*Tablette*/
 
 @media screen and (min-width:768px) and (max-width:992px){
@@ -486,11 +489,11 @@ input::placeholder{
 
     .ApartmentsList{
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .ApartmentCard{
-        margin-top: 7%;
+        box-shadow: 0px 0px 8px #36323261;
     }
 
     .PopularCard{
@@ -500,7 +503,12 @@ input::placeholder{
     }
 
     .PopularCard img{
-        width: 33%;
+        width: 250px;
+        height: auto;
+    }
+
+    .PopularRight{
+        height: auto;
     }
     
     .PopularTitle h3{
@@ -523,20 +531,12 @@ input::placeholder{
         margin: 25px;
     }
 
-    .PopularRight{
-        padding: 2% 5% 0% 2%;
-    }
-
     #MarseillesPopular, #MarseillesLocation{
         border-radius: 0%;
     }
     
     #MarseillesLocation{
         background-color: white;
-    }
-
-    #MarseillesLocation a{
-        padding: 5%;
     }
 
     #ActivitiesSection{
@@ -547,10 +547,15 @@ input::placeholder{
         padding: 1%;
     }
 
-    .Stars{ /*Bouger etoiles?*/
+    .Stars{ 
         font-size: 18px;
     }
+
+    .PopularCard h4{
+        margin: 0px;
+    }
 }
+
 /*Smartphone*/
 
 @media screen and (max-width:767px){
@@ -592,7 +597,13 @@ input::placeholder{
     }
 
     #logo{
-       margin: auto;
+       display: none;
+    }
+
+    #ResponsiveLogo{
+        display: inline;
+        margin: auto;
+        width: 150px;
     }
 
     .menu{
@@ -642,7 +653,7 @@ input::placeholder{
     }
 
     .PopularList{
-        gap: 10px;
+        gap: 10px; 
         flex-grow: 3;
     }
 
@@ -695,13 +706,13 @@ input::placeholder{
         gap: 0%;
     }
 
-   #Footer{
-    height: auto;
-    flex-direction: column;
-    padding: 5% 2%;
+    #Footer{
+        height: auto;
+        flex-direction: column;
+        padding: 5% 2%;
    }
 
-   .FooterLinks{
+    .FooterLinks{
        width: auto;
        padding-bottom: 2%;
    }
